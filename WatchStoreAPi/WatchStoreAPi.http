@@ -1,6 +1,37 @@
 @WatchStoreAPi_HostAddress = http://localhost:5019
 
-GET {{WatchStoreAPi_HostAddress}}/weatherforecast/
+GET {{WatchStoreAPi_HostAddress}}/api/Products
+Accept: application/json
+
+###
+
+POST {{WatchStoreAPi_HostAddress}}/api/Products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 5,
+  "name": "Field Watch",
+  "description": "A rugged everyday watch with a canvas strap.",
+  "price": 129.99
+}
+
+###
+
+PUT {{WatchStoreAPi_HostAddress}}/api/Products/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 2,
+  "name": "Sport Watch (Updated)",
+  "description": "Updated description for the sport watch.",
+  "price": 159.99
+}
+
+###
+
+DELETE {{WatchStoreAPi_HostAddress}}/api/Products/3
 Accept: application/json
 
 ###
